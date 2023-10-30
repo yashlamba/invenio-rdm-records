@@ -25,6 +25,7 @@ import { Button, Form, Grid, Header, Menu, Modal } from "semantic-ui-react";
 import * as Yup from "yup";
 import { LicenseFilter } from "./LicenseFilter";
 import { LicenseResults } from "./LicenseResults";
+import { LicenseSearchBar } from "./LicenseSearchBar";
 
 const overriddenComponents = {
   "SearchFilters.Toggle": LicenseFilter,
@@ -132,15 +133,7 @@ export class LicenseModal extends Component {
                     <Grid>
                       <Grid.Row>
                         <Grid.Column width={8} floated="left" verticalAlign="middle">
-                          <SearchBar
-                            placeholder={i18next.t("Search")}
-                            autofocus
-                            actionProps={{
-                              icon: "search",
-                              content: null,
-                              className: "search",
-                            }}
-                          />
+                          <LicenseSearchBar />
                         </Grid.Column>
                         <Grid.Column width={8} textAlign="right" floated="right">
                           <Menu compact>
